@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC001_Input Correct user ID</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a3b71bbf-018f-4ed7-8006-5d1d3fc6d9d5</testCaseGuid>
+</TestCaseEntity>
