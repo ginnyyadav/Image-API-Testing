@@ -30,6 +30,8 @@ WS.comment('IF requesting "created" image status AND "original" contentIntent WI
 resp2 = WS.sendRequest(findTestObject('List Images Webservice Requests/List Images', [('status') : 'created', ('contentIntent') : 'original'
             , ('page') : 0, ('size') : 1000]))
 
+WS.comment('THEN')
+
 WS.verifyResponseStatusCode(resp2, 200)
 
 WS.comment('IF requesting "available" image status AND "alternate" contentIntent WITH page 0 and pagination at 1,000 THEN a code 200 success message should be received indicating the successfu pull of those images')
@@ -37,12 +39,16 @@ WS.comment('IF requesting "available" image status AND "alternate" contentIntent
 resp3 = WS.sendRequest(findTestObject('List Images Webservice Requests/List Images', [('status') : 'available', ('contentIntent') : 'alternate'
             , ('page') : 0, ('size') : 1000]))
 
+WS.comment('THEN')
+
 WS.verifyResponseStatusCode(resp3, 200)
 
 WS.comment('IF requesting "available" image status AND "original" contentIntent WITH page 0 and pagination at 1,000 THEN a code 200 success message should be received indicating the successfu pull of those images')
 
 resp4 = WS.sendRequest(findTestObject('List Images Webservice Requests/List Images', [('status') : 'available', ('contentIntent') : 'original'
             , ('page') : 0, ('size') : 1000]))
+
+WS.comment('THEN')
 
 WS.verifyResponseStatusCode(resp4, 200)
 
