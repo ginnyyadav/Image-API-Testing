@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description>Create a new image for the specified user with only content using the specified content intent.</description>
-   <name>Create Image (Content) - Alternate - PNG</name>
+   <name>Create Image (Content)</name>
    <tag></tag>
-   <elementGuidId>63a63bd6-9cec-4828-84aa-71feb140a050</elementGuidId>
+   <elementGuidId>9fc8f541-15cd-40d9-8570-6a825a17d528</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;filePath&quot;: &quot;G:\\My Drive\\QS Issues\\qs0078-Implement-image-service\\Max_PNG_Test_1.png&quot;,
-  &quot;fileSize&quot;: 0,
-  &quot;contentType&quot;: &quot;image/png&quot;
+  &quot;filePath&quot;: &quot;G:\\My Drive\\QS Issues\\qs0078-Implement-image-service\\Max_JPEG_Test.jpg&quot;,
+  &quot;fileSize&quot;: 1756798,
+  &quot;contentType&quot;: &quot;image/jpeg&quot;
 }</httpBodyContent>
    <httpBodyType>file</httpBodyType>
    <httpHeaderProperties>
@@ -18,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>image/png</value>
+      <value>${contentType}</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -36,11 +36,18 @@
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
    <variables>
-      <defaultValue>'Original'</defaultValue>
+      <defaultValue>'original'</defaultValue>
       <description>can be original or alternate</description>
-      <id>d4ad02db-fe0d-4c61-a74b-44d4d7c744b2</id>
+      <id>442f7a57-5757-496c-bb9b-59d63f354e4d</id>
       <masked>false</masked>
-      <name>${contentIntent}</name>
+      <name>contentIntent</name>
+   </variables>
+   <variables>
+      <defaultValue>'image/jpeg'</defaultValue>
+      <description>can be jpg or PNG max 100mb</description>
+      <id>371e2ddc-07a7-4a0e-a091-6f092b77168c</id>
+      <masked>false</masked>
+      <name>contentType</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

@@ -13,7 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-resp1 = WS.sendRequest(findTestObject('Create Image (Metadata) Webservice Request/Create Image (Metadata) Webservice Request'))
+resp1 = WS.sendRequest(findTestObject('Create Image Webservice Requests/Create Image (Metadata) Webservice Request'))
 
 WS.verifyResponseStatusCode(resp1, 201)
 
