@@ -9,7 +9,7 @@
    <httpBody></httpBody>
    <httpBodyContent>{
   &quot;filePath&quot;: &quot;G:\\My Drive\\QS Issues\\qs0078-Implement-image-service\\Max_PNG_Test_1.png&quot;,
-  &quot;fileSize&quot;: 1774441,
+  &quot;fileSize&quot;: 0,
   &quot;contentType&quot;: &quot;image/png&quot;
 }</httpBodyContent>
    <httpBodyType>file</httpBodyType>
@@ -29,12 +29,19 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://stg-api.tidepool.org/v1/users/d4b7e47052/images/content/alternate</restUrl>
+   <restUrl>https://stg-api.tidepool.org/v1/users/d4b7e47052/images/content/${contentIntent}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>'Original'</defaultValue>
+      <description>can be original or alternate</description>
+      <id>d4ad02db-fe0d-4c61-a74b-44d4d7c744b2</id>
+      <masked>false</masked>
+      <name>${contentIntent}</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

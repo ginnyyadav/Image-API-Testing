@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC003_JPEG_Original</name>
+   <name>List Images Test Cases</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>d5decc5f-2bc4-4fc4-9c4c-b52f0ab1a2a7</testCaseGuid>
+   <testCaseGuid>cba2c816-4f40-4d32-ae31-24d8636b8466</testCaseGuid>
 </TestCaseEntity>

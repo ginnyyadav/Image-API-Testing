@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>List Images (Pagination Specified)</name>
+   <name>List Images</name>
    <tag></tag>
-   <elementGuidId>01c5f2e4-04b2-4f05-a04c-543324d5e954</elementGuidId>
+   <elementGuidId>46a6cf0e-5382-4896-94d4-b5fbf6e2d058</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
@@ -29,12 +29,40 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://stg-api.tidepool.org/v1/users/d4b7e47052/images?page=0&amp;size=1000</restUrl>
+   <restUrl>https://stg-api.tidepool.org/v1/users/d4b7e47052/images?status=${status}&amp;contentIntent=${contentIntent}&amp;page=${page}&amp;size=${size}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>'available'</defaultValue>
+      <description>can be available or created</description>
+      <id>25fd9b8c-6d2b-492a-a4c2-76a91953e8af</id>
+      <masked>false</masked>
+      <name>status</name>
+   </variables>
+   <variables>
+      <defaultValue>'original'</defaultValue>
+      <description>can be original or alternate</description>
+      <id>b24e770b-4478-4c31-b833-91269b050294</id>
+      <masked>false</masked>
+      <name>contentIntent</name>
+   </variables>
+   <variables>
+      <defaultValue>0</defaultValue>
+      <description></description>
+      <id>33e57caf-33a2-4fd0-8153-b752fc028960</id>
+      <masked>false</masked>
+      <name>page</name>
+   </variables>
+   <variables>
+      <defaultValue>1000</defaultValue>
+      <description></description>
+      <id>97f37427-9e50-411e-a3aa-60e1d6a84fea</id>
+      <masked>false</masked>
+      <name>size</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
