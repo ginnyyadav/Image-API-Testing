@@ -8,17 +8,33 @@
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;filePath&quot;: &quot;G:\\My Drive\\QS Issues\\qs0078-Implement-image-service\\JPEG_Oversize_Test 2.jpg&quot;,
-  &quot;fileSize&quot;: 0,
-  &quot;contentType&quot;: &quot;image/jpeg&quot;
+  &quot;contentType&quot;: &quot;multipart/form-data&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;,
+  &quot;parameters&quot;: [
+    {
+      &quot;name&quot;: &quot;metadata&quot;,
+      &quot;value&quot;: &quot;G:\\My Drive\\QS Issues\\qs0078-Implement-image-service\\metadata1.json&quot;,
+      &quot;type&quot;: &quot;File&quot;
+    },
+    {
+      &quot;name&quot;: &quot;contentIntent&quot;,
+      &quot;value&quot;: &quot;G:\\My Drive\\QS Issues\\qs0078-Implement-image-service\\TextFile2.txt&quot;,
+      &quot;type&quot;: &quot;File&quot;
+    },
+    {
+      &quot;name&quot;: &quot;content&quot;,
+      &quot;value&quot;: &quot;G:\\My Drive\\QS Issues\\qs0078-Implement-image-service\\Max_JPEG_Test.jpg&quot;,
+      &quot;type&quot;: &quot;File&quot;
+    }
+  ]
 }</httpBodyContent>
-   <httpBodyType>file</httpBodyType>
+   <httpBodyType>form-data</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>image/jpeg</value>
+      <value>multipart/form-data</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -29,7 +45,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://stg-api.tidepool.org/v1/users/d4b7e47052/images?contentIntent=original</restUrl>
+   <restUrl>https://stg-api.tidepool.org/v1/users/d4b7e47052/images</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

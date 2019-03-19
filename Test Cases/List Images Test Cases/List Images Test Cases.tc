@@ -3,6 +3,9 @@
    <description></description>
    <name>List Images Test Cases</name>
    <tag></tag>
-   <comment></comment>
+   <comment>IF requesting &quot;available&quot; image status AND &quot;original&quot; contentIntent WITH page 0 and pagination at 1,000 THEN a code 200 success message should be received indicating the successfu pull of those images
+IF requesting &quot;created&quot; image status AND &quot;original&quot; contentIntent WITH page 0 and pagination at 1,000 THEN a code 200 success message should be received indicating the successfu pull of those images
+IF requesting &quot;available&quot; image status AND &quot;alternate&quot; contentIntent WITH page 0 and pagination at 1,000 THEN a code 200 success message should be received indicating the successfu pull of those images
+IF requesting &quot;available&quot; image status AND &quot;original&quot; contentIntent WITH page 0 and pagination at 1,000 THEN a code 200 success message should be received indicating the successfu pull of those images</comment>
    <testCaseGuid>cba2c816-4f40-4d32-ae31-24d8636b8466</testCaseGuid>
 </TestCaseEntity>

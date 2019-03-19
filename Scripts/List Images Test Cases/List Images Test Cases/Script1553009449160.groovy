@@ -13,30 +13,36 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WS.comment('IF requesting "available" image status AND "original" contentIntent WITH page 0 and pagination at 1,000 THEN a code 200 success message should be received indicating the successfu pull of those images')
+WS.comment('Given')
+
+resp0 = WS.sendRequestAndVerify(findTestObject('Login to STG'))
+
+WS.comment('IF requesting "available" image status AND "original" contentIntent WITH page 0 and pagination at 1,000')
 
 resp1 = WS.sendRequest(findTestObject('List Images Webservice Requests/List Images'))
+
+WS.comment('THEN')
 
 WS.verifyResponseStatusCode(resp1, 200)
 
 WS.comment('IF requesting "created" image status AND "original" contentIntent WITH page 0 and pagination at 1,000 THEN a code 200 success message should be received indicating the successfu pull of those images')
 
-resp2 = WS.sendRequest(findTestObject('List Images Webservice Requests/List Images', [('status') : 'created'
-            , ('contentIntent') : 'original', ('page') : 0, ('size') : 1000]))
+resp2 = WS.sendRequest(findTestObject('List Images Webservice Requests/List Images', [('status') : 'created', ('contentIntent') : 'original'
+            , ('page') : 0, ('size') : 1000]))
 
 WS.verifyResponseStatusCode(resp2, 200)
 
 WS.comment('IF requesting "available" image status AND "alternate" contentIntent WITH page 0 and pagination at 1,000 THEN a code 200 success message should be received indicating the successfu pull of those images')
 
-resp3= WS.sendRequest(findTestObject('List Images Webservice Requests/List Images', [('status') : 'available'
-	, ('contentIntent') : 'alternate', ('page') : 0, ('size') : 1000]))
+resp3 = WS.sendRequest(findTestObject('List Images Webservice Requests/List Images', [('status') : 'available', ('contentIntent') : 'alternate'
+            , ('page') : 0, ('size') : 1000]))
 
 WS.verifyResponseStatusCode(resp3, 200)
 
 WS.comment('IF requesting "available" image status AND "original" contentIntent WITH page 0 and pagination at 1,000 THEN a code 200 success message should be received indicating the successfu pull of those images')
 
-resp4 = WS.sendRequest(findTestObject('List Images Webservice Requests/List Images', [('status') : 'available'
-	, ('contentIntent') : 'original', ('page') : 0, ('size') : 1000]))
+resp4 = WS.sendRequest(findTestObject('List Images Webservice Requests/List Images', [('status') : 'available', ('contentIntent') : 'original'
+            , ('page') : 0, ('size') : 1000]))
 
 WS.verifyResponseStatusCode(resp4, 200)
 
